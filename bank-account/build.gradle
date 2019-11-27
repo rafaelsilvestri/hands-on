@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+    dependencies {
+        classpath 'com.adarshr:gradle-test-logger-plugin:1.6.0'
+    }
+}
+apply plugin: 'com.adarshr.test-logger'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'com.challenge.bank.account.Application'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/groups/public/' }
+}
+
+dependencies {
+	def springVersion = '5.1.9.RELEASE'
+	def junitVersion = '5.5.2'
+	def slf4jVersion = '1.7.25'
+	def jacksonVersion = '2.9.9'
+
+  	compile('org.slf4j:slf4j-api:' + slf4jVersion)
+  	compile('org.slf4j:slf4j-jdk14:' + slf4jVersion)
+  	compile('org.slf4j:slf4j-simple:' + slf4jVersion)
+  	
+	compile('io.netty:netty-all:4.1.37.Final')	
+	compile('com.fasterxml.jackson.core:jackson-databind:' + jacksonVersion)
+	compile('com.fasterxml.jackson.core:jackson-core:' + jacksonVersion)
+	compile('org.springframework:spring-core:' + springVersion)
+	compile('org.springframework:spring-context:' + springVersion)
+
+    testImplementation('org.mockito:mockito-core:3.+')
+	testImplementation ('org.junit.jupiter:junit-jupiter-api:'+ junitVersion)
+  	testRuntimeOnly ('org.junit.jupiter:junit-jupiter-engine:' + junitVersion)
+    testImplementation ('org.junit.jupiter:junit-jupiter-api:'+ junitVersion)
+}
+
+run {    
+  systemProperties System.getProperties()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+testlogger {
+    theme 'mocha'     
+    showExceptions true
+    slowThreshold 2000
+    showSummary true
+    showPassed true
+    showSkipped true
+    showFailed true
+    showStandardStreams false
+    showPassedStandardStreams true
+    showSkippedStandardStreams true
+    showFailedStandardStreams true
+}
