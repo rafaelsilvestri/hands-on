@@ -1,0 +1,22 @@
+plugins {
+	id 'java-library'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url  "https://dl.bintray.com/servicetalk/servicetalk/"
+	}
+}
+
+dependencies {
+	implementation platform("io.servicetalk:servicetalk-bom:0.19.0")
+
+
+	implementation 'io.servicetalk:servicetalk-http-router-jersey'
+	implementation 'io.servicetalk:servicetalk-data-jackson-jersey'
+	implementation "io.servicetalk:servicetalk-annotations"
+	implementation 'io.servicetalk:servicetalk-http-netty'
+
+	implementation "org.glassfish.jersey.inject:jersey-hk2:2.30"
+}

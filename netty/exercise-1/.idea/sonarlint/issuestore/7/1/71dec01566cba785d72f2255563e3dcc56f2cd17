@@ -1,0 +1,17 @@
+
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(Ϊ¶’ϊÿÿÿÿ8Ρ‚ΐμό-
+V
+squid:S106""9Replace this use of System.out or System.err by a logger.(©―–ή8ζθ¦μό-
+nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(πόϊÿÿÿÿ8ΪίΏνό-
+Fsquid:S1148B"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¬ύ”μό-
+Xsquid:S1141 "5Extract this nested try block into a separate method.(΅»Άόωÿÿÿÿ8Μ―±μό-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ΨΠΣµϊÿÿÿÿ8Ε£©λό-
+Fsquid:S1148>"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8Μ―±μό-
+Msquid:S2093%"*Change this "try" to a try-with-resources.(΅»Άόωÿÿÿÿ8ΧΚªμό-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(µΏη‚8—Οζλό-
+Fsquid:S11489"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8«€―μό-
+Fsquid:S11484"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ε¬—μό-
+%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ϋΏΨ
