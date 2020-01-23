@@ -1,8 +1,5 @@
 package com.github.rafaelsilvestri.order;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class FtpWatcher {
 
     private OrderProcessor orderProcessor;
