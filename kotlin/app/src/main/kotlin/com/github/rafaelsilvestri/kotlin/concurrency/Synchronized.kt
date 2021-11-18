@@ -10,7 +10,7 @@ val storage = HashMap<String, List<Int>>()
 var counter = 0
 
 // when synchronize only increment, duplications happen even with final result of counter is always the same
-@Synchronized
+//@Synchronized
 fun increment() {
     counter++
 }
